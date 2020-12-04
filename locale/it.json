@@ -13,28 +13,28 @@
     "string": "Gestisci e aggiungi pagine aggiuntive"
   },
   "configurationMenuPermissionGroups": {
-    "string": "Manage your permission groups and their permissions"
+    "string": "Gestisci i permessi di gruppo"
   },
   "configurationMenuProductTypes": {
     "string": "Definisci le tipologie di prodotto che vendi"
   },
   "configurationMenuShipping": {
-    "string": "Gestisci come spedisci i tuoi ordini"
+    "string": "Gestisci la spedizione dei tuoi ordini"
   },
   "configurationMenuSiteSettings": {
     "string": "Vedi e aggiorna le impostazioni del sito"
   },
   "configurationMenuStaff": {
-    "string": "Gestisci i tuoi impiegati ed i loro permessi"
+    "string": "Gestisci gli utenti e i loro permessi"
   },
   "configurationMenuTaxes": {
     "string": "Gestisci il modo in cui il tuo negozio addebita le tasse"
   },
   "configurationMenuWarehouses": {
-    "string": "Manage and update your warehouse information"
+    "string": "Gestisci e aggiorna le informazioni del tuo magazzino"
   },
   "configurationPluginsPages": {
-    "string": "Vedi e aggiorno i tuoi plugin e le loro impostazioni."
+    "string": "Vedi e aggiorna i tuoi plugin e le loro impostazioni."
   },
   "homeActivityCardHeader": {
     "context": "header",
@@ -55,7 +55,7 @@
     "string": "Queste sono alcune informazioni recuperate sul tuo negozio"
   },
   "homeNotificationTableNoOrders": {
-    "string": "Nessun oridne pronto per l'evasione"
+    "string": "Nessun ordine pronto per l'evasione"
   },
   "homeNotificationTableOrders": {
     "string": "{amount, plural,one {Un ordine pronto per l'evasione} other {{amount} Ordini pronti per l'evasione}}"
@@ -67,7 +67,7 @@
     "string": "{amount, plural,one {Un Prodotto esaurito} other {{amount} Prodotti esauriti}}"
   },
   "homeNotificationsNoPayments": {
-    "string": "Nessun pagamento in attesa di acquisizione"
+    "string": "Nessun pagamento in attesa di essere catturato"
   },
   "homeNotificationsTableNoProducts": {
     "string": "Nessun prodotto esaurito"
@@ -207,7 +207,7 @@
   },
   "productExportFieldAvailability": {
     "context": "product field",
-    "string": "Available for purchase"
+    "string": "Disponibile per l'acquisto"
   },
   "productExportFieldCategory": {
     "context": "product field",
@@ -227,19 +227,19 @@
   },
   "productExportFieldPrice": {
     "context": "product field",
-    "string": "Cost Price"
+    "string": "Costo"
   },
   "productExportFieldProductImages": {
     "context": "product field",
-    "string": "Product Images"
+    "string": "Immagini di Prodotto"
   },
   "productExportFieldProductWeight": {
     "context": "product field",
-    "string": "Export Product Weight"
+    "string": "Esporta prodotto peso"
   },
   "productExportFieldTaxes": {
     "context": "product field",
-    "string": "Charge Taxes"
+    "string": "Tassabile"
   },
   "productExportFieldType": {
     "context": "product field",
@@ -251,15 +251,15 @@
   },
   "productExportFieldVariantPrice": {
     "context": "product field",
-    "string": "Variant Price"
+    "string": "Prezzo della Variante"
   },
   "productExportFieldVariantSku": {
     "context": "product field",
-    "string": "Export Variant SKU"
+    "string": "Esporta Variante SKU"
   },
   "productExportFieldVariantWeight": {
     "context": "product field",
-    "string": "Export Variant Weight"
+    "string": "Esporta Variante Peso"
   },
   "productExportFieldVisibility": {
     "context": "product field",
@@ -304,11 +304,11 @@
   },
   "productVariantCreatorWarehouseSectionDescription": {
     "context": "no warehouses info",
-    "string": "There are no warehouses set up for your store. You can configure variants without providing stock quantities."
+    "string": "Non ci sono magazzini impostati per questo shop. Puoi configurare le varianti senza associare una specifica quantità."
   },
   "productVariantCreatorWarehouseSectionHeader": {
     "context": "header",
-    "string": "Warehouses"
+    "string": "Magazzini"
   },
   "productVariantPriceOptionalCostPriceField": {
     "context": "optional field",
@@ -416,7 +416,7 @@
   },
   "src_dot_apps_dot_components_dot_AppDeleteDialog_dot_3817179919": {
     "context": "delete app",
-    "string": "Deleting {name}, you will remove installation of the app. If you are paying for app subscription, remember to unsubscribe from the app in Saleor Marketplace. Are you sure you want to delete the app?"
+    "string": "Deleting {name}, you will remove installation of the app. If you are paying for app subscription, remember to unsubscribe from the app in STORITALIA Marketplace. Are you sure you want to delete the app?"
   },
   "src_dot_apps_dot_components_dot_AppDetailsPage_dot_1782042241": {
     "context": "link",
@@ -480,7 +480,7 @@
   },
   "src_dot_apps_dot_components_dot_AppInProgressDeleteDialog_dot_3817179919": {
     "context": "delete app",
-    "string": "Deleting {name}, you will remove installation of the app. If you are paying for app subscription, remember to unsubscribe from the app in Saleor Marketplace. Are you sure you want to delete the app?"
+    "string": "Deleting {name}, you will remove installation of the app. If you are paying for app subscription, remember to unsubscribe from the app in STORITALIA Marketplace. Are you sure you want to delete the app?"
   },
   "src_dot_apps_dot_components_dot_AppInstallErrorPage_dot_1152717819": {
     "context": "title",
@@ -488,7 +488,7 @@
   },
   "src_dot_apps_dot_components_dot_AppInstallErrorPage_dot_1261716527": {
     "context": "content",
-    "string": "Saleor couldn’t fetch crucial information regarding installation. Without those System can’t install the app in your Saleor. Please use the button below to get back to system’s dashboard."
+    "string": "STORITALIA couldn’t fetch crucial information regarding installation. Without those System can’t install the app in your Saleor. Please use the button below to get back to system’s dashboard."
   },
   "src_dot_apps_dot_components_dot_AppInstallErrorPage_dot_3375237564": {
     "context": "button",
@@ -540,7 +540,7 @@
   },
   "src_dot_apps_dot_components_dot_CustomAppCreatePage_dot_3076071936": {
     "context": "card description",
-    "string": "Expand or restrict app permissions to access certain part of Saleor system."
+    "string": "Expand or restrict app permissions to access certain part of STORITALIA system."
   },
   "src_dot_apps_dot_components_dot_CustomAppCreatePage_dot_3189779214": {
     "context": "header",
@@ -573,7 +573,7 @@
   },
   "src_dot_apps_dot_components_dot_CustomAppDetailsPage_dot_3076071936": {
     "context": "card description",
-    "string": "Expand or restrict app permissions to access certain part of Saleor system."
+    "string": "Expand or restrict app permissions to access certain part of STORITALIA system."
   },
   "src_dot_apps_dot_components_dot_CustomAppDetailsPage_dot_570656367": {
     "context": "checkbox label",
@@ -635,7 +635,7 @@
   },
   "src_dot_apps_dot_components_dot_Marketplace_dot_2932910073": {
     "context": "section header",
-    "string": "Saleor Marketplace"
+    "string": "STORITALIA Marketplace"
   },
   "src_dot_apps_dot_components_dot_Marketplace_dot_3259214524": {
     "context": "marketplace content",
@@ -647,7 +647,7 @@
   },
   "src_dot_apps_dot_components_dot_Marketplace_dot_52985091": {
     "context": "marketplace content",
-    "string": "Discover great free and paid apps in our Saleor Marketplace."
+    "string": "Discover great free and paid apps in our STORITALIA Marketplace."
   },
   "src_dot_apps_dot_components_dot_TokenCreateDialog_dot_1336855942": {
     "string": "Token Generato"
@@ -2797,7 +2797,7 @@
   },
   "src_dot_orders_dot_components_dot_OrderCannotCancelOrderDialog_dot_1561587911": {
     "context": "dialog header",
-    "string": "Saleor couldn’t cancel order"
+    "string": "STORITALIA couldn’t cancel order"
   },
   "src_dot_orders_dot_components_dot_OrderCannotCancelOrderDialog_dot_775268031": {
     "string": "There are still fulfillments created for this order. Cancel the fulfillments first before you cancel the order."
@@ -3656,7 +3656,7 @@
   },
   "src_dot_permissionGroups_dot_components_dot_PermissionGroupCreatePage_dot_3920591233": {
     "context": "card description",
-    "string": "Expand or restrict group's permissions to access certain part of saleor system."
+    "string": "Expand or restrict group's permissions to access certain part of STORITALIA system."
   },
   "src_dot_permissionGroups_dot_components_dot_PermissionGroupDeleteDialog_dot_2297471173": {
     "context": "dialog content",
@@ -3676,7 +3676,7 @@
   },
   "src_dot_permissionGroups_dot_components_dot_PermissionGroupDetailsPage_dot_3920591233": {
     "context": "card description",
-    "string": "Expand or restrict group's permissions to access certain part of saleor system."
+    "string": "Expand or restrict group's permissions to access certain part of STORITALIA system."
   },
   "src_dot_permissionGroups_dot_components_dot_PermissionGroupInfo_dot_2081191949": {
     "context": "text field label",
@@ -4674,7 +4674,7 @@
     "string": "Propietà"
   },
   "src_dot_readOnly": {
-    "string": "Saleor funziona in sola lettura. I cambiamenti non verranno salvati."
+    "string": "STORITALIA funziona in sola lettura. I cambiamenti non verranno salvati."
   },
   "src_dot_readyToCapture": {
     "context": "order status",
@@ -5096,7 +5096,7 @@
     "string": "Qui troverai tutte le impostazioni sulle emails del tuo negozio. Puoi indicare l'email principale e alcuni contenuti delle tue email."
   },
   "src_dot_somethingWentWrong": {
-    "string": "Saleor ha incontrato un problema inaspettato"
+    "string": "STORITALIA ha incontrato un problema inaspettato"
   },
   "src_dot_staff": {
     "context": "staff section name",
