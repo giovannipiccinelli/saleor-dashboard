@@ -151,12 +151,16 @@ const Routes: React.FC = () => {
             <Switch>
               <SectionRoute exact path="/" component={HomePage} />
               <SectionRoute
-                permissions={[PermissionEnum.MANAGE_PRODUCTS]}
+                permissions={[
+                  PermissionEnum.MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES
+                ]}
                 path="/categories"
                 component={CategorySection}
               />
               <SectionRoute
-                permissions={[PermissionEnum.MANAGE_PRODUCTS]}
+                permissions={[
+                  PermissionEnum.MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES
+                ]}
                 path="/collections"
                 component={CollectionSection}
               />
@@ -245,7 +249,9 @@ const Routes: React.FC = () => {
                 component={AppsSection}
               />
               <SectionRoute
-                permissions={[PermissionEnum.MANAGE_PRODUCTS]}
+                permissions={[
+                  PermissionEnum.MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES
+                ]}
                 path={warehouseSection}
                 component={WarehouseSection}
               />

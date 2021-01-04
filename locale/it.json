@@ -48,11 +48,11 @@
   },
   "homeHeaderText": {
     "context": "header",
-    "string": "Ciao, {userName}"
+    "string": "Ciao {userName},"
   },
   "homeHeaderTextCaption": {
     "context": "subheader",
-    "string": "Queste sono alcune informazioni recuperate sul tuo negozio"
+    "string": "Puoi aggiungere nuovi prodotti alla tua collezione. Ci occuperemo noi di tutto il resto!"
   },
   "homeNotificationTableNoOrders": {
     "string": "Nessun ordine pronto per l'evasione"
@@ -71,6 +71,9 @@
   },
   "homeNotificationsTableNoProducts": {
     "string": "Nessun prodotto esaurito"
+  },
+  "homeNotificationsTableNewProduct": {
+    "string": "Crea nuovo prodotto"
   },
   "homeProductListCardOrders": {
     "context": "number of ordered products",

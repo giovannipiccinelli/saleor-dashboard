@@ -32,6 +32,7 @@ interface HomeNotificationTableProps extends UserPermissionProps {
   onOrdersToFulfillClick: () => void;
   onOrdersToCaptureClick: () => void;
   onProductsOutOfStockClick: () => void;
+  onProductsCreateClick: () => void;
 }
 
 const HomeNotificationTable: React.FC<HomeNotificationTableProps> = props => {
@@ -39,6 +40,7 @@ const HomeNotificationTable: React.FC<HomeNotificationTableProps> = props => {
     onOrdersToCaptureClick,
     onOrdersToFulfillClick,
     onProductsOutOfStockClick,
+    onProductsCreateClick,
     ordersToCapture,
     ordersToFulfill,
     productsOutOfStock,
@@ -112,7 +114,9 @@ const HomeNotificationTable: React.FC<HomeNotificationTableProps> = props => {
           </RequirePermissions>
           <RequirePermissions
             userPermissions={userPermissions}
-            requiredPermissions={[PermissionEnum.MANAGE_PRODUCTS]}
+            requiredPermissions={[
+              PermissionEnum.MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES
+            ]}
           >
             <TableRow hover={true} onClick={onProductsOutOfStockClick}>
               <TableCell>
@@ -136,6 +140,24 @@ const HomeNotificationTable: React.FC<HomeNotificationTableProps> = props => {
                     />
                   </Typography>
                 )}
+              </TableCell>
+              <TableCell className={classes.arrowIcon}>
+                <KeyboardArrowRight />
+              </TableCell>
+            </TableRow>
+          </RequirePermissions>
+          <RequirePermissions
+            userPermissions={userPermissions}
+            requiredPermissions={[PermissionEnum.MANAGE_PRODUCTS]}
+          >
+            <TableRow hover={true} onClick={onProductsCreateClick}>
+              <TableCell>
+                <Typography>
+                  <FormattedMessage
+                    defaultMessage="Create new Product"
+                    id="homeNotificationsTableNewProduct"
+                  />
+                </Typography>
               </TableCell>
               <TableCell className={classes.arrowIcon}>
                 <KeyboardArrowRight />

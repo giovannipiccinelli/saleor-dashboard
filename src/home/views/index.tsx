@@ -4,7 +4,11 @@ import React from "react";
 
 import { getUserName, maybe } from "../../misc";
 import { orderListUrl } from "../../orders/urls";
-import { productListUrl, productVariantEditUrl } from "../../products/urls";
+import {
+  productAddUrl,
+  productListUrl,
+  productVariantEditUrl
+} from "../../products/urls";
 import { OrderStatusFilter, StockAvailability } from "../../types/globalTypes";
 import HomePage from "../components/HomePage";
 import { HomePageQuery } from "../queries";
@@ -49,6 +53,7 @@ const HomeSection = () => {
               })
             )
           }
+          onProductsCreateClick={() => navigate(productAddUrl)}
           ordersToCapture={maybe(() => data.ordersToCapture.totalCount)}
           ordersToFulfill={maybe(() => data.ordersToFulfill.totalCount)}
           productsOutOfStock={maybe(() => data.productsOutOfStock.totalCount)}

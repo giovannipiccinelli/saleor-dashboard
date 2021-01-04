@@ -21,7 +21,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({ user }) => {
       <PageHeader
         title={intl.formatMessage(
           {
-            defaultMessage: "Hello there, {userName}",
+            defaultMessage: "Hello there {userName},",
             description: "header",
             id: "homeScreenHeader"
           },

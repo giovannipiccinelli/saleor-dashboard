@@ -16,6 +16,7 @@ const homePageProps: Omit<HomePageProps, "classes"> = {
   onOrdersToCaptureClick: () => undefined,
   onOrdersToFulfillClick: () => undefined,
   onProductClick: () => undefined,
+  onProductsCreateClick: () => undefined,
   onProductsOutOfStockClick: () => undefined,
   orders: shop.ordersToday.totalCount,
   ordersToCapture: shop.ordersToCapture.totalCount,

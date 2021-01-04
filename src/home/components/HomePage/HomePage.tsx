@@ -57,6 +57,7 @@ export interface HomePageProps extends UserPermissionProps {
   onOrdersToFulfillClick: () => void;
   onProductClick: (productId: string, variantId: string) => void;
   onProductsOutOfStockClick: () => void;
+  onProductsCreateClick: () => void;
 }
 
 const HomePage: React.FC<HomePageProps> = props => {
@@ -70,6 +71,7 @@ const HomePage: React.FC<HomePageProps> = props => {
     onOrdersToCaptureClick,
     onOrdersToFulfillClick,
     onProductsOutOfStockClick,
+    onProductsCreateClick,
     ordersToCapture,
     ordersToFulfill,
     productsOutOfStock,
@@ -127,6 +129,7 @@ const HomePage: React.FC<HomePageProps> = props => {
             onOrdersToCaptureClick={onOrdersToCaptureClick}
             onOrdersToFulfillClick={onOrdersToFulfillClick}
             onProductsOutOfStockClick={onProductsOutOfStockClick}
+            onProductsCreateClick={onProductsCreateClick}
             ordersToCapture={ordersToCapture}
             ordersToFulfill={ordersToFulfill}
             productsOutOfStock={productsOutOfStock}
