@@ -1446,7 +1446,7 @@
   },
   "src_dot_components_dot_AvailabilityCard_dot_1306298759": {
     "context": "product availability",
-    "string": "Available for purchase"
+    "string": "Disponibile alla Vendita"
   },
   "src_dot_components_dot_AvailabilityCard_dot_2938074852": {
     "context": "product available for purchase date",
@@ -1454,11 +1454,11 @@
   },
   "src_dot_components_dot_AvailabilityCard_dot_570524410": {
     "context": "product availability date label",
-    "string": "Set availability date"
+    "string": "Disponibile a partire da"
   },
   "src_dot_components_dot_AvailabilityCard_dot_825317195": {
     "context": "product unavailability",
-    "string": "Unavailable for purchase"
+    "string": "Non Disponibile alla Vendita"
   },
   "src_dot_components_dot_ColumnPicker_dot_1483881697": {
     "context": "button",
@@ -1598,15 +1598,15 @@
   },
   "src_dot_components_dot_Metadata_dot_1535223586": {
     "context": "header",
-    "string": "Private Metadata"
+    "string": "Metadata Privati"
   },
   "src_dot_components_dot_Metadata_dot_2024779015": {
     "context": "empty metadata text",
-    "string": "There is no private metadata created for this element."
+    "string": "Non ci sono tag metadata privati associati a questo articolo."
   },
   "src_dot_components_dot_Metadata_dot_2087058956": {
     "context": "empty metadata text",
-    "string": "There is no metadata created for this element."
+    "string": "Non ci sono tag metadata associati a questo articolo."
   },
   "src_dot_components_dot_Metadata_dot_2537046678": {
     "context": "metadata field name, header",
@@ -1614,7 +1614,7 @@
   },
   "src_dot_components_dot_Metadata_dot_3181473584": {
     "context": "add metadata field,button",
-    "string": "Add Field"
+    "string": "Aggiungi"
   },
   "src_dot_components_dot_Metadata_dot_4190792473": {
     "context": "table action",
@@ -1626,7 +1626,7 @@
   },
   "src_dot_components_dot_Metadata_dot_553451245": {
     "context": "empty metadata text",
-    "string": "Use the button below to add new metadata field"
+    "string": "Aggiungi un tag metadata cliccando sotto."
   },
   "src_dot_components_dot_MoneyRange_dot_12301532": {
     "context": "money",
@@ -1879,7 +1879,7 @@
     "string": "Lascia il tuo commento qui..."
   },
   "src_dot_components_dot_VisibilityCard_dot_1311467573": {
-    "string": "Show in product listings"
+    "string": "Mostra l'articolo nei campi di ricerca"
   },
   "src_dot_components_dot_VisibilityCard_dot_1459686496": {
     "context": "section header",
@@ -1894,11 +1894,11 @@
     "string": "Publicato il"
   },
   "src_dot_components_dot_VisibilityCard_dot_2264302389": {
-    "string": "Disabling this checkbox will remove product from search and category pages. It will be available on collection pages."
+    "string": "Disabilitando questa opzione il tuo articolo non sarà disponibile nel campo di ricerca e nella sezione categorie. Sarà solo disponibile sulle pagine collezione."
   },
   "src_dot_components_dot_VisibilityCard_dot_2699516026": {
     "context": "available on date",
-    "string": "Set available on"
+    "string": "Disponibile dal"
   },
   "src_dot_components_dot_VisibilityCard_dot_292404896": {
     "string": "Imposta la data di pubblicazione"
@@ -2729,7 +2729,7 @@
     "string": "Evaso"
   },
   "src_dot_generalInformations": {
-    "string": "General Information"
+    "string": "Informazioni Generali"
   },
   "src_dot_home": {
     "context": "home section name",
@@ -4283,7 +4283,7 @@
   },
   "src_dot_products_dot_components_dot_ProductOrganization_dot_2805838453": {
     "context": "field is optional",
-    "string": "*Facoltativo. L'aggiunta di un prodotto ad una collazione aiuta gli utenti a trovarlo."
+    "string": "*Obbligatorio. Seleziona la tua collezione."
   },
   "src_dot_products_dot_components_dot_ProductOrganization_dot_4257289053": {
     "string": "Tipologia di Prodotto"
@@ -4340,7 +4340,7 @@
   },
   "src_dot_products_dot_components_dot_ProductTaxes_dot_2771905943": {
     "context": "checkbox",
-    "string": "Override the product type's tax rate"
+    "string": "Imposta un'aliquota fiscale specifica per questo prodotto."
   },
   "src_dot_products_dot_components_dot_ProductUpdatePage_dot_2232321263": {
     "context": "product publication date label",
