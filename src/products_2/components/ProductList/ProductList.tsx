@@ -4,7 +4,6 @@ import TableCell from "@material-ui/core/TableCell";
 import TableFooter from "@material-ui/core/TableFooter";
 import TableRow from "@material-ui/core/TableRow";
 import Typography from "@material-ui/core/Typography";
-import Checkbox from "@saleor/components/Checkbox";
 import Money from "@saleor/components/Money";
 import ResponsiveTable from "@saleor/components/ResponsiveTable";
 import Skeleton from "@saleor/components/Skeleton";
@@ -118,8 +117,6 @@ export const ProductList: React.FC<ProductListProps> = props => {
     selected,
     loading,
     sort,
-    toggle,
-    toggleAll,
     toolbar,
     onNextPage,
     onPreviousPage,
@@ -205,7 +202,6 @@ export const ProductList: React.FC<ProductListProps> = props => {
           selected={selected}
           disabled={disabled}
           items={products}
-          toggleAll={toggleAll}
           toolbar={toolbar}
         >
           <TableCellHeader
@@ -221,7 +217,7 @@ export const ProductList: React.FC<ProductListProps> = props => {
             onClick={() => onSort(ProductListUrlSortField.name)}
           >
             <span className={classes.colNameHeader}>
-              <FormattedMessage defaultMessage="Name" description="product" />
+              <FormattedMessage defaultMessage="Nome" description="product" />
             </span>
           </TableCellHeader>
           <DisplayColumn column="productType" displayColumns={settings.columns}>
@@ -235,7 +231,7 @@ export const ProductList: React.FC<ProductListProps> = props => {
               onClick={() => onSort(ProductListUrlSortField.productType)}
             >
               <FormattedMessage
-                defaultMessage="Type"
+                defaultMessage="Tipologia"
                 description="product type"
               />
             </TableCellHeader>
@@ -251,7 +247,7 @@ export const ProductList: React.FC<ProductListProps> = props => {
               onClick={() => onSort(ProductListUrlSortField.status)}
             >
               <FormattedMessage
-                defaultMessage="Published"
+                defaultMessage="Status"
                 description="product status"
               />
             </TableCellHeader>
@@ -297,7 +293,7 @@ export const ProductList: React.FC<ProductListProps> = props => {
               onClick={() => onSort(ProductListUrlSortField.price)}
             >
               <FormattedMessage
-                defaultMessage="Price"
+                defaultMessage="Prezzo"
                 description="product price"
               />
             </TableCellHeader>
@@ -334,14 +330,7 @@ export const ProductList: React.FC<ProductListProps> = props => {
                   data-test="id"
                   data-test-id={maybe(() => product.id)}
                 >
-                  <TableCell padding="checkbox">
-                    <Checkbox
-                      checked={isSelected}
-                      disabled={disabled}
-                      disableClickPropagation
-                      onChange={() => toggle(product.id)}
-                    />
-                  </TableCell>
+                  <TableCell></TableCell>
                   <TableCellAvatar
                     className={classes.colName}
                     thumbnail={maybe(() => product.thumbnail.url)}
@@ -354,12 +343,12 @@ export const ProductList: React.FC<ProductListProps> = props => {
                           <Typography variant="caption">
                             {product.productType.hasVariants ? (
                               <FormattedMessage
-                                defaultMessage="Configurable"
+                                defaultMessage="Configurabile"
                                 description="product type"
                               />
                             ) : (
                               <FormattedMessage
-                                defaultMessage="Simple"
+                                defaultMessage="Semplice"
                                 description="product type"
                               />
                             )}
@@ -400,11 +389,11 @@ export const ProductList: React.FC<ProductListProps> = props => {
                           label={
                             product.isPublished
                               ? intl.formatMessage({
-                                  defaultMessage: "Published",
+                                  defaultMessage: "Pubblicato",
                                   description: "product status"
                                 })
                               : intl.formatMessage({
-                                  defaultMessage: "Not published",
+                                  defaultMessage: "In Elaborazione",
                                   description: "product status"
                                 })
                           }

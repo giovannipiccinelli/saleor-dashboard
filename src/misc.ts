@@ -283,7 +283,7 @@ interface User {
 export function getUserName(user?: User, returnEmail?: boolean) {
   return user && (user.email || (user.firstName && user.lastName))
     ? user.firstName && user.lastName
-      ? [user.firstName, user.lastName].join(" ")
+      ? [user.firstName].join(" ")
       : returnEmail
       ? user.email
       : user.email.split("@")[0]

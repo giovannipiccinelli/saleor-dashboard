@@ -63,6 +63,7 @@ import {
   ProductListUrlSortField,
   productUrl
 } from "../../urls";
+import { useAuth } from "./../../../auth/AuthProvider";
 import {
   areFiltersApplied,
   deleteFilterTab,
@@ -80,6 +81,10 @@ interface ProductListProps {
 }
 
 export const ProductList: React.FC<ProductListProps> = ({ params }) => {
+  const { user } = useAuth();
+
+  params.collections = [user.lastName];
+
   const navigate = useNavigator();
   const notify = useNotifier();
   const paginate = usePaginator();
