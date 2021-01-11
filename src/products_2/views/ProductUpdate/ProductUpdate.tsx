@@ -80,7 +80,6 @@ export const ProductUpdate: React.FC<ProductUpdateProps> = ({ id, params }) => {
   });
   const {
     loadMore: loadMoreCollections,
-    search: searchCollections,
     result: searchCollectionsOpts
   } = useCollectionSearch({
     variables: DEFAULT_INITIAL_SEARCH_DATA
@@ -290,7 +289,6 @@ export const ProductUpdate: React.FC<ProductUpdateProps> = ({ id, params }) => {
         onSetDefaultVariant={onSetDefaultVariant}
         errors={errors}
         fetchCategories={searchCategories}
-        fetchCollections={searchCollections}
         saveButtonBarState={formTransitionState}
         images={maybe(() => data.product.images)}
         header={maybe(() => product.name)}

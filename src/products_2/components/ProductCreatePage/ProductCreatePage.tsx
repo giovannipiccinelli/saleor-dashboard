@@ -49,7 +49,6 @@ interface ProductCreatePageProps {
   warehouses: SearchWarehouses_search_edges_node[];
   taxTypes: TaxTypeFragment[];
   fetchCategories: (data: string) => void;
-  fetchCollections: (data: string) => void;
   fetchProductTypes: (data: string) => void;
   onWarehouseConfigure: () => void;
   onBack?();
@@ -63,7 +62,6 @@ export const ProductCreatePage: React.FC<ProductCreatePageProps> = ({
   collections: collectionChoiceList,
   errors,
   fetchCategories,
-  fetchCollections,
   fetchMoreCategories,
   fetchMoreCollections,
   fetchMoreProductTypes,
@@ -207,7 +205,6 @@ export const ProductCreatePage: React.FC<ProductCreatePageProps> = ({
                   disabled={disabled}
                   errors={errors}
                   fetchCategories={fetchCategories}
-                  fetchCollections={fetchCollections}
                   fetchMoreCategories={fetchMoreCategories}
                   fetchMoreCollections={fetchMoreCollections}
                   fetchMoreProductTypes={fetchMoreProductTypes}
@@ -216,9 +213,7 @@ export const ProductCreatePage: React.FC<ProductCreatePageProps> = ({
                   productTypeInputDisplayValue={data.productType?.name || ""}
                   productTypes={productTypes}
                   onCategoryChange={handlers.selectCategory}
-                  onCollectionChange={handlers.selectCollection}
                   onProductTypeChange={handlers.selectProductType}
-                  collectionsInputDisplayValue={selectedCollections}
                 />
                 <CardSpacer />
               </div>

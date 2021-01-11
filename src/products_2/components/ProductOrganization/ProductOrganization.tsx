@@ -6,9 +6,7 @@ import CardSpacer from "@saleor/components/CardSpacer";
 import CardTitle from "@saleor/components/CardTitle";
 import { FormSpacer } from "@saleor/components/FormSpacer";
 import Hr from "@saleor/components/Hr";
-import MultiAutocompleteSelectField, {
-  MultiAutocompleteChoiceType
-} from "@saleor/components/MultiAutocompleteSelectField";
+import { MultiAutocompleteChoiceType } from "@saleor/components/MultiAutocompleteSelectField";
 import SingleAutocompleteSelectField, {
   SingleAutocompleteChoiceType
 } from "@saleor/components/SingleAutocompleteSelectField";
@@ -47,7 +45,6 @@ interface ProductOrganizationProps {
   categories?: SingleAutocompleteChoiceType[];
   categoryInputDisplayValue: string;
   collections?: MultiAutocompleteChoiceType[];
-  collectionsInputDisplayValue: MultiAutocompleteChoiceType[];
   data: {
     category: string;
     collections: string[];
@@ -59,13 +56,11 @@ interface ProductOrganizationProps {
   productTypeInputDisplayValue?: string;
   productTypes?: SingleAutocompleteChoiceType[];
   fetchCategories: (query: string) => void;
-  fetchCollections: (query: string) => void;
   fetchMoreCategories: FetchMoreProps;
   fetchMoreCollections: FetchMoreProps;
   fetchMoreProductTypes?: FetchMoreProps;
   fetchProductTypes?: (data: string) => void;
   onCategoryChange: (event: ChangeEvent) => void;
-  onCollectionChange: (event: ChangeEvent) => void;
   onProductTypeChange?: (event: ChangeEvent) => void;
 }
 
@@ -74,22 +69,17 @@ const ProductOrganization: React.FC<ProductOrganizationProps> = props => {
     canChangeType,
     categories,
     categoryInputDisplayValue,
-    collections,
-    collectionsInputDisplayValue,
     data,
     disabled,
     errors,
     fetchCategories,
-    fetchCollections,
     fetchMoreCategories,
-    fetchMoreCollections,
     fetchMoreProductTypes,
     fetchProductTypes,
     productType,
     productTypeInputDisplayValue,
     productTypes,
     onCategoryChange,
-    onCollectionChange,
     onProductTypeChange
   } = props;
 
@@ -176,28 +166,6 @@ const ProductOrganization: React.FC<ProductOrganizationProps> = props => {
         <FormSpacer />
         <Hr />
         <FormSpacer />
-        <MultiAutocompleteSelectField
-          displayValues={collectionsInputDisplayValue}
-          error={!!formErrors.collections}
-          label={intl.formatMessage({
-            defaultMessage: "Collezioni"
-          })}
-          choices={disabled ? [] : collections}
-          name="collections"
-          value={data.collections}
-          helperText={
-            getProductErrorMessage(formErrors.collections, intl) ||
-            intl.formatMessage({
-              defaultMessage:
-                "*Obbligatorio. Necessario associare l'articolo alla tua collezione.",
-              description: "field is optional"
-            })
-          }
-          onChange={onCollectionChange}
-          fetchChoices={fetchCollections}
-          data-test="collections"
-          {...fetchMoreCollections}
-        />
       </CardContent>
     </Card>
   );

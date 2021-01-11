@@ -53,7 +53,6 @@ export interface ProductUpdatePageProps extends ListActions {
   warehouses: WarehouseFragment[];
   taxTypes: TaxTypeFragment[];
   fetchCategories: (query: string) => void;
-  fetchCollections: (query: string) => void;
   onVariantsAdd: () => void;
   onVariantShow: (id: string) => () => void;
   onVariantReorder: ReorderAction;
@@ -85,7 +84,6 @@ export const ProductUpdatePage: React.FC<ProductUpdatePageProps> = ({
   collections: collectionChoiceList,
   errors,
   fetchCategories,
-  fetchCollections,
   fetchMoreCategories,
   fetchMoreCollections,
   images,
@@ -275,17 +273,14 @@ export const ProductUpdatePage: React.FC<ProductUpdatePageProps> = ({
                   categories={categories}
                   categoryInputDisplayValue={selectedCategory}
                   collections={collections}
-                  collectionsInputDisplayValue={selectedCollections}
                   data={data}
                   disabled={disabled}
                   errors={errors}
                   fetchCategories={fetchCategories}
-                  fetchCollections={fetchCollections}
                   fetchMoreCategories={fetchMoreCategories}
                   fetchMoreCollections={fetchMoreCollections}
                   productType={product?.productType}
                   onCategoryChange={handlers.selectCategory}
-                  onCollectionChange={handlers.selectCollection}
                 />
               </div>
             </Grid>

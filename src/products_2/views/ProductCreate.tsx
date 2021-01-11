@@ -41,7 +41,6 @@ export const ProductCreateView: React.FC = () => {
   });
   const {
     loadMore: loadMoreCollections,
-    search: searchCollection,
     result: searchCollectionOpts
   } = useCollectionSearch({
     variables: DEFAULT_INITIAL_SEARCH_DATA
@@ -169,7 +168,6 @@ export const ProductCreateView: React.FC = () => {
         disabled={productCreateOpts.loading || productAvailabilityOpts.loading}
         errors={productCreateOpts.data?.productCreate.errors || []}
         fetchCategories={searchCategory}
-        fetchCollections={searchCollection}
         fetchProductTypes={searchProductTypes}
         header={intl.formatMessage({
           defaultMessage: "Nuovo Prodotto",

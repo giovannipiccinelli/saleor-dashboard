@@ -26,6 +26,7 @@ import {
   ProductAttributeInputData
 } from "../ProductAttributes";
 import { ProductStockInput } from "../ProductStocks";
+import { useAuth } from "./../../../auth/AuthProvider";
 
 export interface ProductCreateFormData extends MetadataFormData {
   availableForPurchase: string;
@@ -139,6 +140,8 @@ function useProductCreateForm(
   const [changed, setChanged] = React.useState(false);
   const triggerChange = () => setChanged(true);
 
+  const { user } = useAuth();
+
   const form = useForm({
     ...initial,
     ...defaultInitialFormData
@@ -215,6 +218,7 @@ function useProductCreateForm(
     ...form.data,
     attributes: attributes.data,
     productType,
+    sku: user.lastName + "_" + form.data.name.replace(" ", "_").toLowerCase(),
     stocks: stocks.data
   };
   const submit = () => onSubmit(data);

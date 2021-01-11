@@ -24,7 +24,6 @@ const props: ProductUpdatePageProps = {
   disabled: false,
   errors: [],
   fetchCategories: () => undefined,
-  fetchCollections: () => undefined,
   fetchMoreCategories: fetchMoreProps,
   fetchMoreCollections: fetchMoreProps,
   header: product.name,
