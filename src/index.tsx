@@ -48,6 +48,7 @@ import PermissionGroupSection from "./permissionGroups";
 import PluginsSection from "./plugins";
 import ProductSection from "./products";
 import ProductSection_2 from "./products_2";
+import ProductSection_3 from "./products_3";
 import ProductTypesSection from "./productTypes";
 import ShippingSection from "./shipping";
 import SiteSettingsSection from "./siteSettings";
@@ -191,11 +192,20 @@ const Routes: React.FC = () => {
                 component={OrdersSection}
               />
               {user?.userPermissions.length === 1 &&
-              user?.userPermissions[0]?.code === "MANAGE_PRODUCTS" ? (
+              user?.userPermissions[0]?.code === "MANAGE_PRODUCTS" &&
+              user?.lastName !== "" ? (
                 <SectionRoute
                   permissions={[PermissionEnum.MANAGE_PRODUCTS]}
                   path="/products"
                   component={ProductSection_2}
+                />
+              ) : user?.userPermissions.length === 1 &&
+                user?.userPermissions[0]?.code === "MANAGE_PRODUCTS" &&
+                user?.lastName === "" ? (
+                <SectionRoute
+                  permissions={[PermissionEnum.MANAGE_PRODUCTS]}
+                  path="/products"
+                  component={ProductSection_3}
                 />
               ) : (
                 <SectionRoute
