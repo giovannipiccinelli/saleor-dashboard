@@ -11,6 +11,12 @@ export const DEFAULT_INITIAL_SEARCH_DATA: SearchVariables = {
   query: ""
 };
 
+export const DEFAULT_INITIAL_SEARCH_DATA_PRODUCTTYPE: SearchVariables = {
+  after: null,
+  first: 2,
+  query: ""
+};
+
 export const DEFAULT_INITIAL_PAGINATION_DATA: Pagination = {
   after: undefined,
   before: undefined

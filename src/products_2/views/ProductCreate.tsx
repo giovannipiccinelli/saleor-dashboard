@@ -1,5 +1,8 @@
 import { WindowTitle } from "@saleor/components/WindowTitle";
-import { DEFAULT_INITIAL_SEARCH_DATA } from "@saleor/config";
+import {
+  DEFAULT_INITIAL_SEARCH_DATA,
+  DEFAULT_INITIAL_SEARCH_DATA_PRODUCTTYPE
+} from "@saleor/config";
 import useNavigator from "@saleor/hooks/useNavigator";
 import useNotifier from "@saleor/hooks/useNotifier";
 import useShop from "@saleor/hooks/useShop";
@@ -46,11 +49,10 @@ export const ProductCreateView: React.FC = () => {
     variables: DEFAULT_INITIAL_SEARCH_DATA
   });
   const {
-    loadMore: loadMoreProductTypes,
     search: searchProductTypes,
     result: searchProductTypesOpts
   } = useProductTypeSearch({
-    variables: DEFAULT_INITIAL_SEARCH_DATA
+    variables: DEFAULT_INITIAL_SEARCH_DATA_PRODUCTTYPE
   });
   const warehouses = useWarehouseList({
     displayLoader: true,
@@ -189,11 +191,6 @@ export const ProductCreateView: React.FC = () => {
           hasMore: searchCollectionOpts.data?.search.pageInfo.hasNextPage,
           loading: searchCollectionOpts.loading,
           onFetchMore: loadMoreCollections
-        }}
-        fetchMoreProductTypes={{
-          hasMore: searchProductTypesOpts.data?.search.pageInfo.hasNextPage,
-          loading: searchProductTypesOpts.loading,
-          onFetchMore: loadMoreProductTypes
         }}
         warehouses={
           warehouses.data?.warehouses.edges.map(edge => edge.node) || []

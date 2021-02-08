@@ -40,7 +40,6 @@ interface ProductCreatePageProps {
   disabled: boolean;
   fetchMoreCategories: FetchMoreProps;
   fetchMoreCollections: FetchMoreProps;
-  fetchMoreProductTypes: FetchMoreProps;
   initial?: Partial<ProductCreateFormData>;
   productTypes?: SearchProductTypes_search_edges_node[];
   header: string;
@@ -64,7 +63,6 @@ export const ProductCreatePage: React.FC<ProductCreatePageProps> = ({
   fetchCategories,
   fetchMoreCategories,
   fetchMoreCollections,
-  fetchMoreProductTypes,
   header,
   initial,
   productTypes: productTypeChoiceList,
@@ -207,7 +205,6 @@ export const ProductCreatePage: React.FC<ProductCreatePageProps> = ({
                   fetchCategories={fetchCategories}
                   fetchMoreCategories={fetchMoreCategories}
                   fetchMoreCollections={fetchMoreCollections}
-                  fetchMoreProductTypes={fetchMoreProductTypes}
                   fetchProductTypes={fetchProductTypes}
                   productType={data.productType}
                   productTypeInputDisplayValue={data.productType?.name || ""}
