@@ -205,7 +205,7 @@ const ProductAttributes: React.FC<ProductAttributesProps> = ({
                           helperText={getProductErrorMessage(error, intl)}
                           name={`attribute:${attribute.label}`}
                           label={intl.formatMessage({
-                            defaultMessage: "Value",
+                            defaultMessage: "Valore",
                             description: "attribute value"
                           })}
                           value={attribute.value[0]}
