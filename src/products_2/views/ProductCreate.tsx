@@ -48,10 +48,7 @@ export const ProductCreateView: React.FC = () => {
   } = useCollectionSearch({
     variables: DEFAULT_INITIAL_SEARCH_DATA
   });
-  const {
-    search: searchProductTypes,
-    result: searchProductTypesOpts
-  } = useProductTypeSearch({
+  const { result: searchProductTypesOpts } = useProductTypeSearch({
     variables: DEFAULT_INITIAL_SEARCH_DATA_PRODUCTTYPE
   });
   const warehouses = useWarehouseList({
@@ -170,7 +167,6 @@ export const ProductCreateView: React.FC = () => {
         disabled={productCreateOpts.loading || productAvailabilityOpts.loading}
         errors={productCreateOpts.data?.productCreate.errors || []}
         fetchCategories={searchCategory}
-        fetchProductTypes={searchProductTypes}
         header={intl.formatMessage({
           defaultMessage: "Nuovo Prodotto",
           description: "page header"

@@ -48,7 +48,6 @@ interface ProductCreatePageProps {
   warehouses: SearchWarehouses_search_edges_node[];
   taxTypes: TaxTypeFragment[];
   fetchCategories: (data: string) => void;
-  fetchProductTypes: (data: string) => void;
   onWarehouseConfigure: () => void;
   onBack?();
   onSubmit?(data: ProductCreateData);
@@ -70,7 +69,6 @@ export const ProductCreatePage: React.FC<ProductCreatePageProps> = ({
   warehouses,
   taxTypes,
   onBack,
-  fetchProductTypes,
   weightUnit,
   onSubmit,
   onWarehouseConfigure
@@ -205,7 +203,6 @@ export const ProductCreatePage: React.FC<ProductCreatePageProps> = ({
                   fetchCategories={fetchCategories}
                   fetchMoreCategories={fetchMoreCategories}
                   fetchMoreCollections={fetchMoreCollections}
-                  fetchProductTypes={fetchProductTypes}
                   productType={data.productType}
                   productTypeInputDisplayValue={data.productType?.name || ""}
                   productTypes={productTypes}
